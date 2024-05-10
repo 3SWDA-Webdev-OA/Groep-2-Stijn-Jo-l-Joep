@@ -1,2 +1,2 @@
-# Groep-2-Stijn-Jo-l-Joep
+# Groep-2-Stijn-Joel-Joep
 PixelPlayground project
