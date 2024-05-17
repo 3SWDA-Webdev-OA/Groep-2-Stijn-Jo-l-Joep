@@ -1,0 +1,178 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+header {
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+    border-bottom: 3px solid #444;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+nav {
+    margin: 20px 0;
+}
+
+nav a {
+    margin: 0 15px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.user-info {
+    margin-top: 10px;
+}
+
+.user-info span {
+    margin-right: 15px;
+}
+
+.user-info a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.user-info a:hover {
+    text-decoration: underline;
+}
+
+button {
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: linear-gradient(to right, #5a10b2, #1f67e2);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 100px);
+    padding: 20px;
+}
+
+.container, .dashboard-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.dark-mode .container, .dark-mode .dashboard-card {
+    background-color: #333;
+    color: #e0e0e0;
+}
+
+h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #6a11cb;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background: linear-gradient(to right, #28a745, #218838);
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+input[type="submit"]:hover {
+    background: linear-gradient(to right, #218838, #1e7e34);
+}
+
+.game-selection, .dashboard {
+    text-align: center;
+}
+
+.game-card, .dashboard-card {
+    background: linear-gradient(to bottom, #34e89e, #0f3443);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    color: #fff;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.game-card:hover, .dashboard-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.game-card h3, .dashboard-card h3 {
+    margin: 0 0 10px 0;
+}
+
+.game-card a, .dashboard-card a {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 8px;
+    display: inline-block;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.game-card a:hover, .dashboard-card a:hover {
+    background-color: #0056b3;
+}
