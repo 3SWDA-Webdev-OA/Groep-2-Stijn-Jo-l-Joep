@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PixelPlayground</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="public/css/gamestyle.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: #fff;
+            font-family: 'Poppins', sans-serif;
+        }
+        .welcome-container {
+            text-align: center;
+        }
+        .welcome-container h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+        .welcome-container p {
+            font-size: 1.5em;
+        }
+        .redirect-button {
+            display: none;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #1b1b1b;
+            color: #fff;
+            font-size: 1.2em;
+            border: 2px solid transparent;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            position: relative;
+            z-index: 1;
+        }
+        .redirect-button:hover {
+            background-color: #292929;
+        }
+        .redirect-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: 8px;
+            background: linear-gradient(45deg, #ff00ff, #00ffff, #ff0000, #ffff00);
+            background-size: 400% 400%;
+            animation: gradient 5s ease infinite;
+            z-index: -1;
+            filter: blur(10px);
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+        .redirect-button::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: 8px;
+            background: linear-gradient(45deg, #ff00ff, #00ffff, #ff0000, #ffff00);
+            background-size: 400% 400%;
+            animation: gradient 5s ease infinite;
+            z-index: -1;
+            transition: opacity 0.5s;
+        }
+        .redirect-button.show::before {
+            opacity: 1;
+        }
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+    </style>
+    <script>
+        function redirectToHome() {
+            window.location.href = "public/php/home.php";
+        }
+        function showButton() {
+            document.getElementById('redirect-button').classList.add('show');
+            document.getElementById('redirect-button').style.display = 'inline-block';
+        }
+        setTimeout(redirectToHome, 3000);
+        setTimeout(showButton, 300);
+    </script>
+</head>
+<body>
+    <div class="welcome-container">
+        <h1>Welcome to PixelPlayground</h1>
+        <p>Redirecting you to the home page...</p>
+        <button id="redirect-button" class="redirect-button" onclick="redirectToHome()">If you weren't redirected, please click here</button>
+    </div>
+</body>
+</html>
